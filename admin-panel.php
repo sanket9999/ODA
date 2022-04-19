@@ -80,6 +80,7 @@ if(isset($_GET['cancel']))
 
 
 function generate_bill(){
+  
   $con=mysqli_connect("localhost","root","","myhmsdb");
   $pid = $_SESSION['pid'];
   $output='';
@@ -126,8 +127,8 @@ if(isset($_GET["generate_bill"])){
 
   $content .= '
       <br/>
-      <h2 align ="center"> PANDORA</h2></br>
-      <h3 align ="center"> Bill</h3>
+      <h1 align ="center" style="background-color:lightblue"> PANDORA</h1></br></br>
+      <h2 align ="center"> Bill</h2>
       
 
   ';
