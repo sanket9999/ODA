@@ -79,12 +79,12 @@ function checklen()
 <div class="container register" style="font-family: 'IBM Plex Sans', sans-serif;">
                 <div class="row">
                     <div class="col-md-3 register-left" style="margin-top: 10%;right: 5%">
-                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                        <h3>Welcome</h3>
-                       
+                        <img src="images/test.png" alt=""/>
+                        <h3>Welcome to Pandora Online Healthcare Services</h3>
+                
                     </div>
                     <div class="col-md-9 register-right" style="margin-top: 40px;left: 80px;">
-                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist" style="width: 40%;">
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist" style="width: 65%;">
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Patient</a>
                             </li>
@@ -94,8 +94,14 @@ function checklen()
                             <li class="nav-item">
                                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="admin" aria-selected="false">Receptionist</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#Pharmacist" role="tab" aria-controls="admin" aria-selected="false">Pharmacist</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#Pathologist" role="tab" aria-controls="admin" aria-selected="false">Pathologist</a>
+                            </li>
                         </ul>
-                        <div class="tab-content" id="myTabContent">
+                    <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <h3 class="register-heading">Register as Patient</h3>
                                 <form method="post" action="func2.php">
@@ -160,7 +166,7 @@ function checklen()
                                             <input type="password" class="form-control" placeholder="Password *" name="password3" required/>
                                         </div>
                                         
-                                        <input type="submit" class="btnRegister" name="docsub1" value="Login"/>
+                                        <input type="submit" class="btnRegister" name="docsub1" value="Login" />
                                     </div>
                                 </div>
                             </form>
@@ -188,9 +194,54 @@ function checklen()
                                     </div>
                                 </div>
                             </form>
-                            </div>
-                        </div>
 
+
+                            </div>
+                            <div class="tab-pane fade show" id="Pharmacist" role="tabpanel" aria-labelledby="profile-tab">
+                                <h3  class="register-heading">Login as Pharmacist</h3>
+                                <form method="post" action="func3.php">
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="User Name *" name="username1" onkeydown="return alphaOnly(event);" required/>
+                                        </div>
+                                        
+
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password *" name="password2" required/>
+                                        </div>
+                                        
+                                        <input type="submit" class="btnRegister" name="adsub" value="Login"/>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                        </div>
+                        <div class="tab-pane fade show" id="Pathologist" role="tabpanel" aria-labelledby="profile-tab">
+                                <h3  class="register-heading">Login as Pathologist</h3>
+                                <form method="post" action="func3.php">
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="User Name *" name="username1" onkeydown="return alphaOnly(event);" required/>
+                                        </div>
+                                        
+
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password *" name="password2" required/>
+                                        </div>
+                                        
+                                        <input type="submit" class="btnRegister" name="adsub" value="Login"/>
+                                    </div>
+                                </div>
+                                
+                            </form>
                     </div>
                 </div>
 
