@@ -172,6 +172,7 @@ if(isset($_GET['cancel']))
                     <th scope="col">Appointment Date</th>
                     <th scope="col">Appointment Time</th>
                     <th scope="col">Current Status</th>
+                    <th scope="col"> Contact </th>
                     <th scope="col">Action</th>
                     <th scope="col">Prescribe</th>
 
@@ -211,7 +212,20 @@ if(isset($_GET['cancel']))
                       echo "Cancelled by You";
                     }
                         ?></td>
+                       <td>
+                        <?php if(($row['userStatus']==1) && ($row['doctorStatus']==1))  
+                        { ?>
 
+													
+	                        <a href="doctor-panel.php?ID=<?php echo $row['ID']?>&cancel=update" 
+                              onClick="return confirm('Are you sure you want to Call this appointment ?')"
+                              title="Connect " tooltip-placement="top" tooltip="Remove"><button class="btn"><i class="fa fa-phone"></i></button></a>
+	                        <?php } else {
+
+                                echo "Cancelled";
+                                } ?>
+                        
+                        </td>
                      <td>
                         <?php if(($row['userStatus']==1) && ($row['doctorStatus']==1))  
                         { ?>
